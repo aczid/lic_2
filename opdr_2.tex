@@ -1,0 +1,265 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{url}
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+%\lhead{}\chead{}\rhead{}
+%\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+%%%\usepackage{sectsty}
+%%%\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+%TO: “the courts” ?
+%FROM: Menno van Wieringen, Aram Verstegen, Steven Rekké
+%DATE: 12-11-2011
+
+\title{Remote Search by Justice Authorities}
+\author{Steven Rekke, Menno van Wieringen, Aram Verstegen \\ ??, ??, 4092368}
+\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+%\quote{
+%\textit{This tactical exploitation stuff, where they're breaking into people's computers, bugging them … they make these arguments that it's good, that it saves lives. But we have examples that show this is not true. I was just in Tunisia a couple of days ago and I met people who told me that posting on Facebook resulted in death squads showing up in your house.}
+
+%Jacob Appelbaum, core member of the TOR project \cite{guardian}
+%}
+%\abstract{
+
+%}
+
+%Topic:
+%The EU has advised member-states (insofar the national law allows it) to use Remote Forensic Software (RFS), also known as remote search tools, in the fight against cybercrime.
+
+%Task 1: study the topic, describe the facts (technical, policy, privacy), and define it in terms of violation of privacy and/or data protection.
+
+%Task 2: write legal memorandum advising:
+
+    %the courts, on how existing legislation can be interpreted
+    %the EU legislator, on whether new legislation is necessary
+
+    %explain added value
+    %stipulate safeguards that are required
+
+%Sub-Task: explain socio-technical implications:
+
+    %how employment can infringe privacy
+    %to what extent they would be effective
+
+%Main questions:
+
+    %What is it?
+    %Does existing law cover the problem?
+    %Does existing law allow it?
+    %Is new (EU) legislation required?
+
+%Legal memorandum format:
+
+%TO, FROM, DATE, RE:
+%QUESTION(S) PRESENTED
+%SHORT ANSWER(S)
+%STATEMENT OF FACTS
+%APPLICABLE STATUTES (optional)
+%DISCUSSION
+%CONCLUSION
+
+\section{Introduction}
+In the Netherlands there has recently been some commotion around the use of \textit{Remote Forensic Software} (RFS) to obtain information from targeted computers.
+% TODO move to conclusion
+%As technical people, we recognize the fact that there is already an applicable term for this kind of software, namely \textit{spyware}.
+
+A national political party asked the Dutch minister of Security and Justice for elucidation about the lawfulness of the use of remote surveillance software by the authorities within the Netherlands. \cite{d66kamervragen}
+
+The Dutch state counsel (OM) replied to this question by answering that the use of RFS software is covered by article 126i and 126m of the code of Strafvordering (Criminal law), and also stated that rules for this are elaborated upon further in an Order of Council.
+Finally, they stated that the RFS software is only used as a key logger or to record audio via a microphone; using the webcam to record video is not currently implemented. \cite{webwereld}
+
+As we understand the matter, this is somewhat of a grey area in the law, falling somewhere between the areas of legislation in criminal, data retention and privacy laws.
+We are tasked with advising the courts on how existing legislation surrounding RFS tools in use by justice authorities should be interpreted, and whether new legislation is deemed necessary.
+We have chosen to look at neighbour states dealing with the same issues for legal precedents, and will reference these in the answers to the presented questions where relevant.
+
+%\subsection{Public law}
+
+%\subsubsection{Criminal law} 
+
+%\subsubsection{Constitutional law} 
+
+\section{Questions presented}
+\begin{enumerate}
+	\item{Does local legislation allow for Remote Forensic Software? (How should existing legislation be interpreted?)}
+	\item{Does the EU need new legislation to regulate the use of Remote Forensic Software?}
+
+	\begin{enumerate}
+	\item{What is the added value of such legislation?}
+	\item{What are required safeguards?}
+	\end{enumerate}
+\end{enumerate}
+
+\section{Short answer}
+\begin{enumerate}
+\item{Yes, it does in principle.
+The Dutch state counsel (OM) has informally stated that there is legal ground for the use of RFS tools in response to the questions posed to the minister of Security and Justice in parliament, and stipulates that the use of such tools may only occur following directions of the public prosecutor.
+This is true in the sense that the law grants Special Powers of Investigation to some justice authorities, among which the power to ``record confidential communications by means of a technical aid''. \cite{bob}
+
+The German Federal Court has determined that RFS is sufficiently different from other investigation techniques to require explicit legislation to create a new police power.
+The German Constitutional Court (FCC) has determined that a new absolute constitutional right applies which limits the application of RFS, but RFS itself is not found unconstitutional.
+}
+
+\item{Yes, it does.
+While Dutch criminal law has provisions for the use of `technical aids' in prosecution, where it mentions the use of electronic devices to intercept traffic it appears to mean a `network tap', but makes no specific statements for or against the use of active, remote forensics software.
+We find the difference between active and passive approaches too big to be disregarded by the law, and feel it should be made explicit.
+
+The German example shows that a mere advisory statement by the council of the European union does not provide enough legal foundation to implement the use of RFS.
+}
+\end{enumerate}
+
+\section{Statement of facts}
+In a statement on measures against cybercrime, the Council of the European Union (EU) advised member states to perform clandestine remote searches of suspects' computers as a means to combat cybercrime.
+These remote searches are executed using so-called \textit{Remote Forensic Software} (RFS) tools.
+
+\subsection{Netherlands}
+When we look into the specific text of article 126i \cite{wb:sv126i}, it is stated that the justice department can order an investigating officer to intercept communication using a technical tool.
+It is also stated that a closed off area or a house may be entered without the approval of its owner.
+It seems that the article refers to physical areas and not to digital computer areas.
+It all depends on the interpretation of `closed off area'.
+
+In article 126m \cite{wb:sv126m}, it is stated that the justice department can order an investigating officer to intercept communication  using a technical tool that is not meant for the public domain, and which is run by a provider of communication services on behalf of the justice authorities.
+This allows placement of telephone taps, and in modern times, network taps at land-line or internet exchange level.
+Allowing the placement of an active software tap (RFS) on a computer that uses the services of the communication provider is not well-defined in the law.
+
+\subsection{Germany}
+In Germany, the concept of RFS tools was officially introduced 2006, when German Prosecution authorities applied for a search warrant to remotely search a suspect's computer (Ref. 1).
+% TODO ref
+This application was rejected, but triggered a public debate about the legality of remotely searching a suspect's computer (Ref. 2).
+% TODO ref
+In its decision to deny the application for a search warrant, the Federal Court of Justice avoided to discuss the legal issues that surround the use of an RFS tool.
+The court however, did indicate that remote searches are different from existing investigation techniques and require explicit legislation to create a new police power.
+Neither the laws regulating mail intercepts, nor those regulating telephone surveillance were deemed appropriate.
+So to enable the use of RFS, the German government needed legislation to meet these requirements.
+As most policing functions are regulated on state level, it was now up to individual states to adjust their legislation to enable the use of RFS.
+In December 2006, the state of Nordrhein-Westfalen was the first state to enable the use of RFS by their constitutional protection agency through an amendment of its law for the protection of the constitution (Verfassungsschutzgesetz).
+This paragraph (Article 5 II Par. 11, VSG NRW) permitted the secret observation, investigation and clandestine interception of communication via the Internet and access to its IT systems.
+In a response to this amendment, a constitutional complaint was filed with the German Federal Constitutional Court (FCC) to challenge its constitutionality. On February 27th of 2008, the FCC ruled that the amendment to the Verfassungsschutzgesetz was in fact unconstitutional and thus unlawful. The FCC did not, however, declare all use of RFS unconstitutional. Instead, the FCC recognized a new constitutional right: the confidentiality and integrity of information technology systems. As this constitutional right can only be limited in the interest of other constitutional rights, the FCC through their judgment have given limit and scope to the use of RFC in Germany.
+
+\subsection{UK}
+
+\section{Discussion}
+% Steven
+When the German Court had to decide on whether or not to provide the search warrant requesting the use of RFS, they had to investigate whether RFS could be subsumed under existing legal concepts.
+Two possible matches in existing legislation were identified: the search of premises, and interceptions of telecommunication.
+Both these measures are regulated by the German Criminal Procedural Code (Strafprozessordnung – StPO).
+
+Under these regulations, search of a person's premises and belongings is allowed if it is believed to lead to the discovery of evidence.
+Case law points out that this includes the search and confiscation of data stored on data storage devices (Ref. 3). % TODO ref
+This would seem to suffice for RFS purposes, as it is irrelevant to the rule whether this search occurs remotely or in person.
+There is, however, a substantial difference because search using RFS tools occurs without the knowledge of the suspect.
+Several rules in StPO (article 105, 106, 107) ensure that the subject of the search is informed about the reason for the search and they can verify that the search is legitimate.
+This led the court to decide that the search of premises is an insufficient match for RFS.
+
+The second possible investigative technique to use as an analogy is the interception of telecommunications, which is regulated under article 100a StPO.
+This article allows for monitoring and recording of communications.
+Under specific circumstances this is allowed even without the subject being aware.
+An essential part of these regulations is that the target of the interception is a data flow between suspect and a third party.
+The purely technical means of transmitting data from the RFS to the investigating party is not the thing that is intercepted, and is not the subject of the investigation.
+RFS can therefore not be regulated under interception of telecommunications legislation.
+
+When both these analogies proved insufficient, the court decided that new legislation was required to enable RFS tools to be used.
+This new legislation first came in the form of an amendment of article 5 of the Verfassungsschutzgesetz of Nordrhein-Westfalen.
+
+The constitutional court then determined that this amendment was unconstitutional, because it is in violation of a new constitutional right: the confidentiality and integrity of IT systems.
+This new right was derived from a basic constitutional right in the German constitution, namely the protection of human dignity.
+This new human right limits the use of RFS tools, as their use now needs to be in accordance with this human right.
+The new human right can only be limited if the measure restricting the right is proportionate, i.e. if sufficient evidence exists that other fundamental rights are protected by this measure.
+This means that the use of RFS comes with several important requirements.
+It can only be used to prevent serious crimes, it can only be permitted by a judge on a case-by-case basis and it cannot violate the core area of the private conduct of life.
+
+Because it is difficult to differentiate between data that does, or does not, affect the core area of private conduct of life the court states that adequate procedures need to be in place for the examination stage of the data. If core data is detected, it needs to be deleted immediately and the use of such data is prohibited. The selection process needs to be done by an investigating judge, a state attorney, or a judicial officer. The German judicial system is not thought to have the manpower to actually implement these procedures, crippling the user of RFS even further.
+
+
+% Menno
+The Order of Council describing technical tools, ``Besluit Technische Hulpmiddelen Strafvordering'' which looses translates to ``Decision on technical aids in criminal procedure'' \cite{besluit} describes what a technical tool should be, but remains vague other than a reference to another article (namely 26ee, part a - which states that the technical tools as referenced in a few articles are technical tools).
+In this article the technical tools are allowed to gain information, but still there are more points to consider.
+
+``By or on behalf of the force manager, a place for the storage of technical aids and ensure that the nominated site is secure and accessible only by or under the supervision of authorized personnel.'' % TODO whut
+
+The question here is: how would one install and hide the spyware on a computer, as the machine may be or become accessible to experts putting the spyware to use for their own (malicious) purposes.
+This means that the security of a digital product needs to be done on a physical way.
+That is storing it on a media device looked up in a secure location.
+
+``The removal of the technical device made by a duly appointed by or on behalf of the force manager and expert in the field investigating officer.''
+
+Another question that arises is how could one make sure that the distributed spyware is removed when it is not in use anymore, because it is possible that the computer containing the spyware is disconnected from the internet, preventing remote removal of the software.
+%This could leave the machine vulnerable to be used 
+%This means that the computer contains the spyware but the spyware is not making contact with the distributor and they could not give any command to erase/remove the spyware from the targeted system.
+
+
+
+\section{Conclusion}
+Following from the discussion presented above, we come to the conclusion that the German legislation does allow for RFS tools to be used, in principle.
+There are, however, a great number of safeguards in place to restrict and guide the use of RFS in Germany.
+The question arises whether RFS might still be used efficiently under these restrictions.
+The German example shows that the use of Remote Forensic Software comes with several legal issues and that their use may be in violation of local legislation and even the constitution of EU member states.
+Furthermore, it shows that if the European Union wishes to promote the use of RFS tools, it should provide legal foothold for the member states to implement these measures.
+
+Especially given the mobile nature of present-day EU citizens and their computers, the implementation calls for EU wide regulations.
+An RFS tool that is used on the PC of a suspect who crosses a national border would result in several jurisdictional issues.
+The added value of EU legislation could be that such jurisdictional issues might be resolved before they arise.
+
+
+REFERENCES
+
+    G. Hornung, `Ermächtigungsgrundlage für die “Onlinedurchsuchung”?', Datenschutz und Datensicherheit 31 (2007): 575-580
+    BGH, NJW 2007, 930
+    BVerfG, NJW 2008
+
+\bibliographystyle{alpha}
+\bibliography{references}
+
+Germany
+http://www.dw-world.de/dw/article/0,,15449054,00.html
+http://www.zdnet.nl/search/tag/bundestrojan/
+
+Netherlands
+http://www.nucia.eu/forum/showthread.php?t=65368
+
+%http://www.computable.nl/artikel/ict_topics/overheid/4214022/1277202/d66-stelt-kamervragen-over-spyware-overheid.html
+
+
+\end{document}
