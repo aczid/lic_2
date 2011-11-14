@@ -103,12 +103,10 @@
 
 \section{Introduction}
 In the Netherlands there has recently been some commotion around the use of \textit{Remote Forensic Software} (RFS) to obtain information from targeted computers.
-% TODO move to conclusion
-%As technical people, we recognize the fact that there is already an applicable term for this kind of software, namely \textit{spyware}.
 
 A national political party asked the Dutch minister of Security and Justice for elucidation about the lawfulness of the use of remote surveillance software by the authorities within the Netherlands. \cite{d66kamervragen}
 
-The Dutch state counsel (OM) replied to this question by answering that the use of RFS software is covered by article 126i and 126m of the code of Strafvordering (Criminal law), and also stated that rules for this are elaborated upon further in an Order of Council.
+The Dutch state counsel (OM) replied to this question by answering that the use of RFS tools is covered by article 126i and 126m of the code of Strafvordering (Criminal law), and also stated that rules for this are elaborated upon further in an Order of Council.
 Finally, they stated that the RFS software is only used as a key logger or to record audio via a microphone; using the webcam to record video is not currently implemented. \cite{webwereld}
 
 As we understand the matter, this is somewhat of a grey area in the law, falling somewhere between the areas of legislation in criminal, data retention and privacy laws.
@@ -135,16 +133,20 @@ We have chosen to look at neighbour states dealing with the same issues for lega
 \section{Short answer}
 \begin{enumerate}
 \item{Yes, it does in principle.
-The Dutch state counsel (OM) has informally stated that there is legal ground for the use of RFS tools in response to the questions posed to the minister of Security and Justice in parliament, and stipulates that the use of such tools may only occur following directions of the public prosecutor.
+The Dutch state counsel (OM) has informally stated that there is legal ground for the use of RFS tools in response to the questions posed to the minister of Security and Justice in parliament, and stipulates that the use of such tools may only occur following directions of the public prosecutor. \cite{webwereld}
 This is true in the sense that the law grants Special Powers of Investigation to some justice authorities, among which the power to ``record confidential communications by means of a technical aid''. \cite{bob}
 
 The German Federal Court has determined that RFS is sufficiently different from other investigation techniques to require explicit legislation to create a new police power.
 The German Constitutional Court (FCC) has determined that a new absolute constitutional right applies which limits the application of RFS, but RFS itself is not found unconstitutional.
+
+In the United Kingdom, the use of RFS is mandated by the Regulation of Investigatory Powers Act, which allows remote wiretapping, the local placement of bugging devices, and other, less well-defined forms of intrusive surveillance. \cite{regul_invest}
 }
 
 \item{Yes, it does.
 While Dutch criminal law has provisions for the use of `technical aids' in prosecution, where it mentions the use of electronic devices to intercept traffic it appears to mean a `network tap', but makes no specific statements for or against the use of active, remote forensics software.
-We find the difference between active and passive approaches too big to be disregarded by the law, and feel it should be made explicit.
+
+In the United Kingdom, the relevant provisions in the Regulation of Investigatory Powers Act makes general exemptions for the use of technical surveillance tools, but again does not make explicit their reach and technical paradigm (active or passive).
+There exist general provisions allowing the aggregation and processing of personal data by law enforcement agencies in the UK Data Protection Act, but they also make no explicit distinction in active or passive gathering of information.
 
 The German example shows that a mere advisory statement by the council of the European union does not provide enough legal foundation to implement the use of RFS.
 }
@@ -154,7 +156,7 @@ The German example shows that a mere advisory statement by the council of the Eu
 In a statement on measures against cybercrime, the Council of the European Union (EU) advised member states to perform clandestine remote searches of suspects' computers as a means to combat cybercrime.
 These remote searches are executed using so-called \textit{Remote Forensic Software} (RFS) tools.
 
-\subsection{Netherlands}
+\subsection{the Netherlands}
 When we look into the specific text of article 126i \cite{wb:sv126i}, it is stated that the justice department can order an investigating officer to intercept communication using a technical tool.
 It is also stated that a closed off area or a house may be entered without the approval of its owner.
 It seems that the article refers to physical areas and not to digital computer areas.
@@ -178,9 +180,37 @@ In December 2006, the state of Nordrhein-Westfalen was the first state to enable
 This paragraph (Article 5 II Par. 11, VSG NRW) permitted the secret observation, investigation and clandestine interception of communication via the Internet and access to its IT systems.
 In a response to this amendment, a constitutional complaint was filed with the German Federal Constitutional Court (FCC) to challenge its constitutionality. On February 27th of 2008, the FCC ruled that the amendment to the Verfassungsschutzgesetz was in fact unconstitutional and thus unlawful. The FCC did not, however, declare all use of RFS unconstitutional. Instead, the FCC recognized a new constitutional right: the confidentiality and integrity of information technology systems. As this constitutional right can only be limited in the interest of other constitutional rights, the FCC through their judgment have given limit and scope to the use of RFC in Germany.
 
-\subsection{UK}
+\subsection{United Kingdom}
+A spokesman for the Association of Chief Police Officers, officiously and anonymously commented that surveillance using RFS was regulated under the Regulation of Investigatory Powers Act, when prompted by the Independent. \cite{independent}
+Looking at the law, we find it does indeed provide justice authorities with a legal basis for what it terms `intrusive surveillance' in the interest of national security. \cite{regul_invest}
+Interestingly, it goes on to define that surveillance is intrusive if it ``it is carried out by means only of a surveillance device designed or adapted principally for the purpose of providing information about the location of a vehicle; or'', ''it is surveillance consisting in any such interception of a communication as falls within section 48(4)'' in section 26,article 4.
+
+UK law also sets a legal standard for the use of collected personal data in the Data Protection Act \cite{dpact}, and makes specific exemptions for law enforcement and, in particular, agencies upholding national security.
+Similar to Dutch regulation, it allows law enforcement to retrieve and process electronic data from telecommunications networks, but does not make explicit recommendations for or against active wiretaps like RFS tools can provide.
+Crucially, the subject of investigation need not be informed of information being collected if it is done under such an exemption.
+%Furthermore, the processing and transfer of 
 
 \section{Discussion}
+
+\subsection{the Netherlands}
+% Menno
+The Order of Council describing technical tools, ``Besluit Technische Hulpmiddelen Strafvordering'' which looses translates to ``Decision on technical aids in criminal procedure'' \cite{besluit} describes what a technical tool should be, but remains vague other than a reference to another article (namely 26ee, part a - which states that the technical tools as referenced in a few articles are technical tools).
+In this article the technical tools are allowed to gain information, but still there are more points to consider.
+
+``By or on behalf of the force manager, a place for the storage of technical aids and ensure that the nominated site is secure and accessible only by or under the supervision of authorized personnel.'' % TODO whut
+
+The question here is: how would one install and hide the RFS on a computer, as the machine may be or become accessible to experts putting the RFS to use for their own (malicious) purposes.
+This means that the security of a digital product needs to be done on a physical way.
+That is storing it on a media device looked up in a secure location.
+
+``The removal of the technical device made by a duly appointed by or on behalf of the force manager and expert in the field investigating officer.''
+
+Another question that arises is how could one make sure that the distributed RFS is removed when it is not in use anymore, because it is possible that the computer containing the RFS is disconnected from the internet, preventing remote removal of the software.
+%This could leave the machine vulnerable to be used 
+%This means that the computer contains the spyware but the spyware is not making contact with the distributor and they could not give any command to erase/remove the spyware from the targeted system.
+
+
+\subsection{Germany}
 % Steven
 When the German Court had to decide on whether or not to provide the search warrant requesting the use of RFS, they had to investigate whether RFS could be subsumed under existing legal concepts.
 Two possible matches in existing legislation were identified: the search of premises, and interceptions of telecommunication.
@@ -210,56 +240,51 @@ The new human right can only be limited if the measure restricting the right is 
 This means that the use of RFS comes with several important requirements.
 It can only be used to prevent serious crimes, it can only be permitted by a judge on a case-by-case basis and it cannot violate the core area of the private conduct of life.
 
-Because it is difficult to differentiate between data that does, or does not, affect the core area of private conduct of life the court states that adequate procedures need to be in place for the examination stage of the data. If core data is detected, it needs to be deleted immediately and the use of such data is prohibited. The selection process needs to be done by an investigating judge, a state attorney, or a judicial officer. The German judicial system is not thought to have the manpower to actually implement these procedures, crippling the user of RFS even further.
+Because it is difficult to differentiate between data that does, or does not, affect the core area of private conduct of life the court states that adequate procedures need to be in place for the examination stage of the data.
+If core data is detected, it needs to be deleted immediately and the use of such data is prohibited.
+The selection process needs to be done by an investigating judge, a state attorney, or a judicial officer.
+The German judicial system is not thought to have the manpower to actually implement these procedures, crippling the user of RFS even further.
 
+\subsection{United Kingdom}
+UK law lacks case law where the lawfulness of the use of RFS tools has been contested.
 
-% Menno
-The Order of Council describing technical tools, ``Besluit Technische Hulpmiddelen Strafvordering'' which looses translates to ``Decision on technical aids in criminal procedure'' \cite{besluit} describes what a technical tool should be, but remains vague other than a reference to another article (namely 26ee, part a - which states that the technical tools as referenced in a few articles are technical tools).
-In this article the technical tools are allowed to gain information, but still there are more points to consider.
+The Regulation of Investigatory Powers Act is different to the Dutch book of Strafvordering, in that it specifically deals with investigatory powers regarding the interception of communications data.
+As it was specifically introduced to deal with modern surveillance and interception issues, it specifies legal requirements for the use of technical surveillance tools and hints at their lawful applications. \cite{regul_invest}
 
-``By or on behalf of the force manager, a place for the storage of technical aids and ensure that the nominated site is secure and accessible only by or under the supervision of authorized personnel.'' % TODO whut
+It makes the distinction between various levels of surveillance, ranging from the interception of communications (wiretapping) to what is termed \textit{intrusive surveillance}, namely the placing of eavesdropping equipment.
+Crucially, it does not make the distinction between physical hardware bugs and ethereal software solutions.
+One could argue the law leaves this area open to interpretation, but the latter implementation of such a tool has much farther-reaching consequences in terms of data privacy.
+A rogue actor in law enforcement could employ these tools unlawfully, and there might be little evidence in terms of a `paper trail' to convict such individuals for their abuse.
 
-The question here is: how would one install and hide the spyware on a computer, as the machine may be or become accessible to experts putting the spyware to use for their own (malicious) purposes.
-This means that the security of a digital product needs to be done on a physical way.
-That is storing it on a media device looked up in a secure location.
+The UK Data Protection Act of 1998 defines its `data protection principles' in Schedule 1, such as the requirement that data is obtained for a specific purpose and may not be further processed, stored excessively long or transported to overseas jurisdictions. \cite{dpact}
+The law makes various exemptions to its regulations on obtaining personal data for agencies operating on behalf of justice authorities for the purposes of national security, crime and taxation.
+It exempts national security services from all the data protection principles if deemed necessary, and exempts law enforcement agencies from the general obligation to not retrieve personal data.
+Schedule 3 of the law makes more specific requirements for the exemption from the requirement to not process \textit{sensitive} personal data.
 
-``The removal of the technical device made by a duly appointed by or on behalf of the force manager and expert in the field investigating officer.''
-
-Another question that arises is how could one make sure that the distributed spyware is removed when it is not in use anymore, because it is possible that the computer containing the spyware is disconnected from the internet, preventing remote removal of the software.
-%This could leave the machine vulnerable to be used 
-%This means that the computer contains the spyware but the spyware is not making contact with the distributor and they could not give any command to erase/remove the spyware from the targeted system.
-
-
+If an officer of the law were to breach the terms of these exemptions, there is quite clearly a suitable legal framework to pursue a conviction.
 
 \section{Conclusion}
-Following from the discussion presented above, we come to the conclusion that the German legislation does allow for RFS tools to be used, in principle.
+Following from the discussion presented above, we come to the conclusion that the local legislation does allow for RFS tools to be used, in principle.
 There are, however, a great number of safeguards in place to restrict and guide the use of RFS in Germany.
 The question arises whether RFS might still be used efficiently under these restrictions.
+
 The German example shows that the use of Remote Forensic Software comes with several legal issues and that their use may be in violation of local legislation and even the constitution of EU member states.
 Furthermore, it shows that if the European Union wishes to promote the use of RFS tools, it should provide legal foothold for the member states to implement these measures.
+
+The local laws all lack a clear provision for the use of \textit{software} tools; they simply provide a framework for various levels of surveillance and allow the use of otherwise unspecified technical tools to accomplish it.
+We find the difference between active and passive approaches too big to be disregarded by the law, and feel it should be made explicit.
+
+The problem we see in the application of RFS tools is that there is little accountability in the `placement', or rather employment of a non-physical (software) tool.
+Taking into account the possibility that the RFS tool be delivered to targeted individuals via some \textit{e-government} website - for example, one to submit tax reports - has the secondary effect that citizens might become cynical or distrustful towards their own government's intelligence operations.
+
+The industry surrounding computer surveillance is rapidly growing, and remains suspiciously shy of press or citizen involvement, or even observance.
+A final issue of concern is that such software vendors export their tools to repressive regimes outside of the EU, something that in some cases might be considered aiding an enemy regime, or in some cases even assisting in a human rights violation. \cite{guardian}
 
 Especially given the mobile nature of present-day EU citizens and their computers, the implementation calls for EU wide regulations.
 An RFS tool that is used on the PC of a suspect who crosses a national border would result in several jurisdictional issues.
 The added value of EU legislation could be that such jurisdictional issues might be resolved before they arise.
 
-
-REFERENCES
-
-    G. Hornung, `Ermächtigungsgrundlage für die “Onlinedurchsuchung”?', Datenschutz und Datensicherheit 31 (2007): 575-580
-    BGH, NJW 2007, 930
-    BVerfG, NJW 2008
-
 \bibliographystyle{alpha}
 \bibliography{references}
-
-Germany
-http://www.dw-world.de/dw/article/0,,15449054,00.html
-http://www.zdnet.nl/search/tag/bundestrojan/
-
-Netherlands
-http://www.nucia.eu/forum/showthread.php?t=65368
-
-%http://www.computable.nl/artikel/ict_topics/overheid/4214022/1277202/d66-stelt-kamervragen-over-spyware-overheid.html
-
 
 \end{document}
